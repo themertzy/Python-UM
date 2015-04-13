@@ -1,0 +1,284 @@
+#This file is a collection of useful functions that I have found that I often need.
+#While most of them are very simple, some of them can be used for more complex tasks.
+#All needed modules are imported with each function, class, or method.
+
+##################################################################################################################################################################################
+
+#This function can be used to read in a file and split it along a certain
+#designated delimeter. I have found this particularly usefull when dealing
+#with lists of items in a file that require the replacement of a common delimeter.
+#Note: This program returns a list of the items split at the given delimeter. If this
+#delimeter is a new line character or something of that sort, then the delimeter
+#needs to be put in with quotes. ALWAYS PUT FILE NAMES IN QUOTES!!!
+#This function was tested using the fileToTest.py and using the text file
+#fileToTest.txt
+
+def fileToList(inputFile, delimeter):
+
+        try:
+                with open(inputFile, "r") as myfile:
+
+                        data = myfile.read().replace(delimeter, ' ')
+
+                        returnValue = data.split(' ')
+
+        except:
+
+                returnValue = "########## You did not enter either a valid file name, or delimeter! ##########"
+
+
+
+        return returnValue
+        
+
+##################################################################################################################################################################################
+
+#This is a class designed to create a die with n number of sides. You must initialize
+#this class with a positive integer number of sides. A generic controller can be found
+#in dieController.py
+
+import random
+
+class Die:
+        
+        def __init__(self, numberOfSides): 
+                
+                self.numSides = int(numberOfSides)
+                self.currentFace = None
+
+
+        def roll(self):
+                
+            self.currentFace = random.randrange(1, self.numSides)
+                
+
+        def displayFace(self):
+
+            return self.currentFace
+
+
+        def changeNumberOfSides(self, newNum): #newNum is an integer.
+
+                self.numSides = newNum
+
+        def displayNumberOfSides(self): #returns an integer
+
+                return self.numSides
+
+##################################################################################################################################################################################
+
+#This is a class designed to handle n number of Die() as a group, or cup.  This allows
+#the user to roll all the die at once or freeze certain ones so that they do not roll
+#while the others do.
+
+#Both of the next two imports are simply in place in case you decide to copy and paste 
+#the code into another program instead of importing the class or the whole useful_methods.py
+#file.
+
+#A generic controller for this class can be found in cupController.py
+
+#NOTE: The previously defined Die() class is needed for this class to work correctly.
+
+from useful_methods import * 
+
+import random
+
+class Cup:
+
+		def __init__(self, numberOfDie, numberOfSides):
+		
+				#Creates a list of lists. Each position in self.cup contains a list with
+				#a Die() and a False. The False is used for determining whether or not
+				#a Die() is frozen. Every Die() starts off as not being frozen and with
+				#the same number of sides.
+		
+				self.numSides = int(numberOfSides)
+				self.numDie = int(numberOfDie)
+				self.cup = []
+				
+				
+				for i in range(0, self.numDie-1):
+
+						self.workingArray = []
+				
+						self.workingArray.append(Die(self.numSides))
+						self.workingArray.append(False)
+				
+						self.cup.append(self.workingArray)
+						
+						
+						
+		def rollCup(self):
+		
+				for g in range(0, self.numDie-1):
+				
+						if self.cup[g][1] == False:
+						
+								self.cup[g][0].roll()
+								
+		def displayFaces(self): 
+
+				#This method returns a list of the current faces of the each Die() in the cup.
+		
+				self.currentFaces = []
+				
+				for h in range(0, self.numDie-1):
+
+						self.currentFaces.append(self.cup[h][0].displayFace())
+
+				return self.currentFaces
+
+		def freeze(self, pos):
+
+				#This method freezes a Die() at position = pos in the Cup(), effectively preventing that Die() 
+				#from being rolled. This is done by changing the freeze variable for that particular Die() 
+				#to True. This method does not return a value.
+
+				self.cup[pos][1] = True
+
+		def isFrozenOneDie(self, pos):
+
+				#Returns True if the Die() at position = pos in the Cup()
+				#is frozen and False if not.
+
+				return self.cup[pos][1]
+
+		def displayNumberOfSidesOneDie(self, pos):
+
+				#This method returns the number of sides of the Die() in the Cup() at position = pos.
+
+				return self.cup[pos][0].displayNumberOfSides()
+
+		def changeNumberOfSidesOneDie(self, pos, newSideNum):
+
+				#Changes the number of sides for a Die() in the Cup() at position = pos
+
+				self.cup[pos][0].changeNumberOfSides(newSideNum)
+
+		def displayAllNumberOfSides(self):
+
+				#Returns a list of all the current Die() number of sides.
+
+				allSides = []
+
+				for pos in range(0, self.numDie-1):
+
+						allSides.append(self.cup[pos][0].displayNumberOfSides())
+
+				return allSides
+
+		def changeAllNumberOfSides(self, newSideNum):
+
+				#Changes the number of sides for all the Die() in the Cup()
+				#to newSideNum
+
+				for pos in range(0, self.numDie-1):
+
+						self.cup[pos][0].changeNumberOfSides(newSideNum)
+
+		def freezeAll(self):
+
+				#freezes all the Die() in the Cup() at one time.
+
+				for pos in range(0, self.numDie-1):
+
+						self.cup[pos][1] = True
+
+		def isAllFrozen(self):
+
+				#Returns a list of all the frozen states of all the Die() in the Cup()
+
+				totalFrozen = []
+
+				for pos in range(0, self.numDie-1):
+
+						totalFrozen.append(self.cup[pos][1])
+
+				return totalFrozen
+
+
+##################################################################################################################################################################################
+
+#This is a generic stack class. I have found that it is very useful in the representation
+#of how computers internally work as well as being good to have for various list-esk
+#problems. FYI many programing language interpreters and virtual machines are run
+#using stacks of some form or another. A test for this class can be found in 
+#stackTest.py
+
+class Stack:
+
+		def __init__(self):
+		
+				self.stack = []
+				
+		def push(self, item):  #puts an item on the top of the stack (aka the item at
+							   #position '0'
+		
+				self.stack.insert(0, item)
+
+
+				
+		def pop(self):  #this method removes the top item (i.e. the item at position '0'
+						#and returns it. Note that this item is not re-put back on the 
+						#stack.
+				
+				self.topItem = self.stack[0]
+		
+				self.stack.remove(self.stack[0])
+				
+				return self.topItem
+				
+		def top(self):  #returns the top of the stack. Sometimes this method is refered 
+						#to as the peek() method.
+		
+				return self.stack[0]
+				
+		def isEmpty(self):
+		
+				return len(self.stack) == 0
+				
+##################################################################################################################################################################################
+
+#This is a recursive implimentation of the factorial method (i.e. num!). Tests for
+#this function can be found in the factorialRecursionTest.py
+
+#WARNING: Trying to use this function on a very large number will cause the computer
+#to freak out and fail. This is not the simplest way to accomplish factorials 
+#recursively.
+
+def factorial(number):
+
+		if number == 1:
+
+				return number
+
+		else:
+
+				return number*factorial(number-1)
+
+##################################################################################################################################################################################
+
+#This is a recursive implementation of the fibonacci number for a given value.
+#This function was tested using the fibonacciTest.py file.
+
+#WARNING: Using this function on sufficiently large numbers could take a while.
+#This is not the simplest way to accomplish Fibonacci numbers recursively.
+
+
+def fibonacci(num):
+
+		if num == 0:
+		
+				return 0
+				
+		elif num == 1:
+		
+				return 1
+				
+		else:
+		
+				return fibonacci(num-1) + fibonacci(num-2)
+			
+					
+		
+				
