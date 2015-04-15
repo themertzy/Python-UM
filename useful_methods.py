@@ -207,20 +207,34 @@ class Cup:
 
 class Stack:
 
-		def __init__(self):
+		def __init__(self, maxSize):
 		
 				self.stack = []
+				maxSize = maxSize
+
+		def isEmpty(self):
+		
+				return len(self.stack) == 0
+
+		def size(self):
+
+				return len(self.stack)
 				
 		def push(self, item):  #puts an item on the top of the stack (aka the item at
 							   #position '0'
+
+			while len(self.stack) < maxSize:
 		
 				self.stack.insert(0, item)
 
 
-				
 		def pop(self):  #this method removes the top item (i.e. the item at position '0'
 						#and returns it. Note that this item is not re-put back on the 
-						#stack.
+						#stack. This method does not work if there are no items on the 
+						#stack. Although this may seem obvious, I decided to put this
+						#check in place just for the sake of being thourough.
+
+			while len(self.stack) != 0:
 				
 				self.topItem = self.stack[0]
 		
@@ -233,10 +247,57 @@ class Stack:
 		
 				return self.stack[0]
 				
-		def isEmpty(self):
-		
-				return len(self.stack) == 0
+
+		def clear(self):  #this method clears all items out of the stack.
+
+				self.stack=[]
 				
+##################################################################################################################################################################################
+
+#This is a queue class.  Similar to the previously defined stack class, queue allows a user
+#to put things on the top of the stack and take them off the bottom. This class can be extended
+#to fit a wider range of problems.
+
+class Queue:
+
+		def __init__(self, maxSize):
+
+				self.queue = []
+				maxsize = maxSize
+
+		def isEmpty(self):
+
+				return len(self.queue) == 0
+
+		def size(self):
+
+				return len(self.queue)
+
+		def push(self, itemToPush):
+
+			while len(self.queue) < maxSize:
+
+				self.queue.append(itemToPush)
+
+		def pop(self):
+
+			while len(self.queue) != 0:
+
+				topItem = self.queue[0]
+
+				self.queue.remove(self.queue[0])
+
+				return topItem
+
+		def last(self):
+
+				return self.queue[0]
+
+		def first(self):
+
+				return self.queue[len(self.queue)-1]
+
+
 ##################################################################################################################################################################################
 
 #This is a recursive implimentation of the factorial method (i.e. num!). Tests for
@@ -278,6 +339,10 @@ def fibonacci(num):
 		else:
 		
 				return fibonacci(num-1) + fibonacci(num-2)
+
+##################################################################################################################################################################################
+
+
 			
 					
 		
