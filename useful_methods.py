@@ -342,8 +342,26 @@ def fibonacci(num):
 
 ##################################################################################################################################################################################
 
+#This gives a much more apparent command to use when you want to start an
+#HTTP server in your current directory. This can be used for website and
+#web application development. This requires the httpServer.py file. A copy
+#of the httpServer.py file can be found in the Python included library.
+#This method is useful if you need to dynamically start a http web server
+#for some reason or another.
 
-			
+#A test for this method can be found in the webServerTest.py 
+
+#REQUIRES: httpServer.py
+
+import server.py
+
+def httpServer(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
+
+    server_address = ('', 8000)
+    httpd = server_class(server_address, handler_class)
+    httpd.serve_forever()
+
+
 					
 		
 				
