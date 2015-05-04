@@ -353,13 +353,13 @@ def fibonacci(num):
 
 #REQUIRES: httpServer.py
 
-import server.py
 
-def httpServer(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
 
-    server_address = ('', 8000)
-    httpd = server_class(server_address, handler_class)
-    httpd.serve_forever()
+#def httpServer(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
+#
+#    server_address = ('', 8000)
+#    httpd = server_class(server_address, handler_class)
+#    httpd.serve_forever()
 
 
 					
