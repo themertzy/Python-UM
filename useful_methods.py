@@ -297,49 +297,6 @@ class Queue:
 
 				return self.queue[len(self.queue)-1]
 
-
-##################################################################################################################################################################################
-
-#This is a recursive implimentation of the factorial method (i.e. num!). Tests for
-#this function can be found in the factorialRecursionTest.py
-
-#WARNING: Trying to use this function on a very large number will cause the computer
-#to freak out and fail. This is not the simplest way to accomplish factorials 
-#recursively.
-
-def factorial(number):
-
-		if number == 1:
-
-				return number
-
-		else:
-
-				return number*factorial(number-1)
-
-##################################################################################################################################################################################
-
-#This is a recursive implementation of the fibonacci number for a given value.
-#This function was tested using the fibonacciTest.py file.
-
-#WARNING: Using this function on sufficiently large numbers could take a while.
-#This is not the simplest way to accomplish Fibonacci numbers recursively.
-
-
-def fibonacci(num):
-
-		if num == 0:
-		
-				return 0
-				
-		elif num == 1:
-		
-				return 1
-				
-		else:
-		
-				return fibonacci(num-1) + fibonacci(num-2)
-
 ##################################################################################################################################################################################
 
 #This gives a much more apparent command to use when you want to start an
@@ -351,15 +308,19 @@ def fibonacci(num):
 
 #A test for this method can be found in the webServerTest.py 
 
-#REQUIRES: httpServer.py
+#REQUIRES: /lib/httpServer.py
+
+import os
+
+def httpServer(isOn):
+
+	while isOn==True:
+
+		os.system('python /lib/httpServer.py') 
 
 
 
-#def httpServer(server_class=HTTPServer, handler_class=BaseHTTPRequestHandler):
-#
-#    server_address = ('', 8000)
-#    httpd = server_class(server_address, handler_class)
-#    httpd.serve_forever()
+
 
 
 					

@@ -1,4 +1,4 @@
-from useful_methods import *
+from ..useful_methods import *
 
 #The useful_methods.py is required for this die generator to work correctly.
 
