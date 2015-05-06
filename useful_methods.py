@@ -13,6 +13,8 @@
 #This function was tested using the fileToTest.py and using the text file
 #fileToTest.txt
 
+#This function returns False if it fails to open, read, or split the text.
+
 def fileToList(inputFile, delimeter):
 
         try:
@@ -24,7 +26,7 @@ def fileToList(inputFile, delimeter):
 
         except:
 
-                returnValue = "########## You did not enter either a valid file name, or delimeter! ##########"
+                returnValue = False
 
 
 
@@ -79,9 +81,9 @@ class Die:
 
 #NOTE: The previously defined Die() class is needed for this class to work correctly.
 
-from useful_methods import * 
 
-import random
+#Previously Imported-----------------------------------------------------------------------------------
+#import random
 
 class Cup:
 
@@ -299,25 +301,60 @@ class Queue:
 
 ##################################################################################################################################################################################
 
-#This gives a much more apparent command to use when you want to start an
-#HTTP server in your current directory. This can be used for website and
-#web application development. This requires the httpServer.py file. A copy
-#of the httpServer.py file can be found in the Python included library.
-#This method is useful if you need to dynamically start a http web server
-#for some reason or another.
+#Reverse Polish Notation (RPN) Calculator
 
-#A test for this method can be found in the webServerTest.py 
+#This calculator is stack based and supports the following operations:
+#exponents, multiplication, division, addition, subtraction
 
-#REQUIRES: /lib/httpServer.py
+#A test for this calculator can be found in rpnCalcTest.py
 
-import os
-
-def httpServer(isOn):
-
-	while isOn==True:
-
-		os.system('python /lib/httpServer.py') 
-
+def op_pow(stack):
+    b = stack.pop(); a = stack.pop()
+    stack.append( a ** b )
+def op_mul(stack):
+    b = stack.pop(); a = stack.pop()
+    stack.append( a * b )
+def op_div(stack):
+    b = stack.pop(); a = stack.pop()
+    stack.append( a / b )
+def op_add(stack):
+    b = stack.pop(); a = stack.pop()
+    stack.append( a + b )
+def op_sub(stack):
+    b = stack.pop(); a = stack.pop()
+    stack.append( a - b )
+def op_num(stack, num):
+    stack.append( num )
+ 
+ops = {
+ '^': op_pow,
+ '*': op_mul,
+ '/': op_div,
+ '+': op_add,
+ '-': op_sub,
+ }
+ 
+def get_input(inp = None):
+    'Inputs an expression and returns list of tokens'
+ 
+    if inp is None:
+        inp = input('expression: ')
+    tokens = inp.strip().split()
+    return tokens
+ 
+def rpn_calc(tokens):
+    stack = []
+    table = ['TOKEN,ACTION,STACK'.split(',')]
+    for token in tokens:
+        if token in ops:
+            action = 'Apply op to top of stack'
+            ops[token](stack)
+            table.append( (token, action, ' '.join(str(s) for s in stack)) )
+        else:
+            action = 'Push num onto top of stack'
+            op_num(stack, eval(token))
+            table.append( (token, action, ' '.join(str(s) for s in stack)) )
+    return table
 
 
 
