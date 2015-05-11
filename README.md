@@ -2,7 +2,7 @@ Package: Useful_Methods
 
 Language: Python v3.4.3
 
-Project Version: 1.0
+Project Version: 1.0.0
 
 Website: https://www.resultheap.com
 
