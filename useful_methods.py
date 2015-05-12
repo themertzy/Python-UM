@@ -357,6 +357,46 @@ def rpn_calc(tokens):
     return table
 
 
+##################################################################################################################################################################################
+
+#This class is a controller for the Python defined dictionary class. This class
+#is designed with simplicity in mind, making managing Python dictionaries much
+#easier.
+
+class PyDict:
+
+	def __init__(self, *args):
+
+		self.storage = {}
+		self.initials = args
+
+		for i in range(0, len(self.initials)-1):
+
+			pass
+
+
+	def add(self, *args):
+
+		pass
+
+
+	def remove(self, *args):
+
+		pass
+
+
+	def length(self):
+
+		pass
+
+
+	def find(self, keyRep):
+
+		pass
+
+
+
+
 
 
 
