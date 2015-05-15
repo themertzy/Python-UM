@@ -394,7 +394,7 @@ class PyDict:
 			return False
 
 
-	def removeKey(self, delKey):
+	def remove(self, delKey):
 
 		try:
 
@@ -407,7 +407,7 @@ class PyDict:
 
 	def length(self):
 
-		pass
+		return len(self.storage)
 
 
 	
