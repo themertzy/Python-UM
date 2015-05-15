@@ -370,23 +370,23 @@ class PyDict:
 		self.storage = {}
 
 
-	def find(self, self.keyRep):					#Search for all the key values asscociated with the given key. 
+	def find(self, keyRep):					#Search for all the key values asscociated with the given key. 
 											#Returns False if not found.
 
-		if self.keyRep in self.storage:
+		if keyRep in storage:
 
-			return self.storage[self.keyRep]
+			return self.storage[keyRep]
 
 		else:
 
 			return False
 
 
-	def add(self, self.addKey, self.addVal):
+	def add(self, addKey, addVal):
 
 		try:
 
-			self.storage[self.addKey] = self.addVal
+			self.storage[addKey] = addVal
 
 		except:
 
@@ -394,11 +394,11 @@ class PyDict:
 			return False
 
 
-	def removeKey(self, self.delKey):
+	def removeKey(self, delKey):
 
 		try:
 
-			del self.storage[self.delKey]
+			del self.storage[delKey]
 
 		except:
 
