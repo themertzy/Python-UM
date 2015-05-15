@@ -365,24 +365,44 @@ def rpn_calc(tokens):
 
 class PyDict:
 
-	def __init__(self, *args):
+	def __init__(self):						#Initializes an empty dictionary
 
 		self.storage = {}
-		self.initials = args
-
-		for i in range(0, len(self.initials)-1):
-
-			pass
 
 
-	def add(self, *args):
+	def find(self, self.keyRep):					#Search for all the key values asscociated with the given key. 
+											#Returns False if not found.
 
-		pass
+		if self.keyRep in self.storage:
+
+			return self.storage[self.keyRep]
+
+		else:
+
+			return False
 
 
-	def remove(self, *args):
+	def add(self, self.addKey, self.addVal):
 
-		pass
+		try:
+
+			self.storage[self.addKey] = self.addVal
+
+		except:
+
+
+			return False
+
+
+	def removeKey(self, self.delKey):
+
+		try:
+
+			del self.storage[self.delKey]
+
+		except:
+
+			return False
 
 
 	def length(self):
@@ -390,9 +410,7 @@ class PyDict:
 		pass
 
 
-	def find(self, keyRep):
-
-		pass
+	
 
 
 
