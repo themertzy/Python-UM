@@ -373,7 +373,7 @@ class PyDict:
 	def find(self, keyRep):					#Search for all the key values asscociated with the given key. 
 											#Returns False if not found.
 
-		if keyRep in storage:
+		if keyRep in self.storage:
 
 			return self.storage[keyRep]
 
