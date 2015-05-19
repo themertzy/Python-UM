@@ -412,10 +412,43 @@ class PyDict:
 
 ##################################################################################################################################################################################
 
+class PyList:
+
+	def __init__(self, *args):
+
+		pass
+
+	def add(self, *args):
+
+		pass
+
+	def remove(self, *args):
+
+		pass
+
+	def size(self):
+
+		pass
+
+	def clear(self):
+
+		pass
+
+
+
+
+
+
+
+
+##################################################################################################################################################################################
+
 #This function activates a HTTP server using the built-in Python server class.  This allows
 #the programmer to run a server in whatever Python code he/she deems necessary.
 
-def httpServer():
+import lib.httpServer
+
+def HTTP_Server():
 
 	pass
 
