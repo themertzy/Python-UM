@@ -1226,7 +1226,7 @@ def test(HandlerClass=BaseHTTPRequestHandler,
         httpd.server_close()
         sys.exit(0)
 
-if __name__ == '__main__':
+def httpServer():
     parser = argparse.ArgumentParser()
     parser.add_argument('--cgi', action='store_true',
                        help='Run as CGI Server')

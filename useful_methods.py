@@ -416,11 +416,18 @@ class PyList:
 
 	def __init__(self, *args):
 
-		pass
+		self.storage = []
+
+		for i in range(0, len(args)-1):
+
+			self.storage.append(args[i])
+
 
 	def add(self, *args):
 
-		pass
+		for i in range(0, len(args)-1):
+
+			self.storage.append(args[i])
 
 	def remove(self, *args):
 
@@ -443,14 +450,6 @@ class PyList:
 
 ##################################################################################################################################################################################
 
-#This function activates a HTTP server using the built-in Python server class.  This allows
-#the programmer to run a server in whatever Python code he/she deems necessary.
-
-import lib.httpServer
-
-def HTTP_Server():
-
-	pass
 
 
 
