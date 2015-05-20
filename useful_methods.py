@@ -412,6 +412,9 @@ class PyDict:
 
 ##################################################################################################################################################################################
 
+#This class is designed similarly to the PyDict class. This class is designed
+#with simplicity and ease of use in mind.
+
 class PyList:
 
 	def __init__(self, *args):
@@ -431,21 +434,17 @@ class PyList:
 
 	def remove(self, *args):
 
-		pass
+		for i in range(0, len(args)-1):
+
+			del self.storage[i]
 
 	def size(self):
 
-		pass
+		return len(self.storage)
 
 	def clear(self):
 
-		pass
-
-
-
-
-
-
+		self.storage = []
 
 
 ##################################################################################################################################################################################
