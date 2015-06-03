@@ -449,6 +449,47 @@ class PyList:
 
 ##################################################################################################################################################################################
 
+#This class is desined similarly to the PyDict and PyList class.  This class is designed
+#with simplicity and ease of use in mind for strings.
+
+class PyString:
+
+	def __init__(self, inputString):
+
+		self.container = inputString
+
+	def append(self, itemToAppend):
+
+		if isinstance(itemToAppend, str):
+
+			self.container = self.container + itemToAppend
+
+			return True
+
+		else:
+
+			return False
+
+	def insert(self):
+
+		pass
+
+	def remove(self):
+
+		pass
+
+	def popLastChar(self):
+
+		pass
+
+	def popFirstChar(self):
+
+		pass
+
+	def replace(self):
+
+		pass
+
 
 
 
