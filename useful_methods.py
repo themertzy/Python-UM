@@ -315,10 +315,11 @@ class BinaryTree(obj):
 
 #Fibonacci Sequence Function using Recursion
 
-def fibb(n):
+def fibb_recur(n):
 	
 	if n <= 1:
 		return n
 	else:
-		return(fib(n-1) + fib(n-2))
+		return(fibb_recur(n-1) + fibb_recur(n-2))
 
+##################################################################################################################################################################################
