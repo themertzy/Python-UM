@@ -310,6 +310,10 @@ class BinaryTree(obj):
 		self.left = None
 		self.right = None
 		self.data = None
+	
+	def add(self, addVal):
+		
+		return 0  #Expand this function
 
 ##################################################################################################################################################################################
 
