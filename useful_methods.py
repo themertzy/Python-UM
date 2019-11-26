@@ -303,7 +303,7 @@ class Queue:
 
 #Binary Tree
 
-class Tree(obj):
+class BinaryTree(obj):
 
 	def __init__(self):
 
