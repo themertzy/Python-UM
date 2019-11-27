@@ -314,6 +314,14 @@ class BinaryTree(obj):
 	def add(self, addVal):
 		
 		return 0  #Expand this function
+	
+	def remove(self, removeVal):
+		
+		return 0  #Expand this function
+	
+	def size(self):
+		
+		return 0  #Expand this function
 
 ##################################################################################################################################################################################
 
