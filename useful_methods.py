@@ -315,29 +315,6 @@ class Node:
 	
 	def __repr__(self):
 		return str(self)
-	
-##################################################################################################################################################################################
-#Binary Tree
-
-class BinaryTree(obj):
-
-	def __init__(self):
-
-		self.left = None
-		self.right = None
-		self.data = None
-	
-	def add(self, addVal):
-		
-		return 0  #Expand this function
-	
-	def remove(self, removeVal):
-		
-		return 0  #Expand this function
-	
-	def size(self):
-		
-		return 0  #Expand this function
 
 ##################################################################################################################################################################################
 
