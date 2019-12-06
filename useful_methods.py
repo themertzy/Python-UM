@@ -557,9 +557,25 @@ def fib_iteration(n):
 
 #A function that computes any variable for Pythagoras' Theorem.
 
-def pythagoreanTheoremCalculator(a,b,c):
+import math
+
+def PyTheoremCalc(a,b,c):
 	
-	return 0
+	if a and b != None and c == None:
+		
+		return 0 #sqrt(a^2+b^2)
+	
+	elif a and c != None and b == None:
+		
+		return 0 #sqrt(c^2-a^2)
+	
+	elif b and c != None and a == None:
+		
+		return 0 #sqrt(c^2-b^2)
+	
+	else:
+		
+		return 0
 	
 	
 
