@@ -581,3 +581,48 @@ def PyTheoremCalc(a,b,c):
 
 
 ##################################################################################################################################################################################
+
+class PyDict:
+	
+	def __init__(self, dict):
+		
+		if dict:
+			
+			self.dict = dict
+			
+		else:
+			
+			self.dict = {}
+			
+	def add(self, key, val):
+		
+		return None
+	
+	def remove(self, key):
+		
+		return None
+	
+	def findkey(self, key):
+		
+		return None
+	
+	def findvalue(self, val):
+		
+		return None
+	
+	def traverse(self):
+		
+		worker = []
+		
+		for i in range(0, len(self.dict)-1):
+			
+			print 0
+		
+		return None
+	
+	def display(self):
+		
+		return None
+			
+
+##################################################################################################################################################################################
