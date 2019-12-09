@@ -602,13 +602,9 @@ class PyDict:
 		
 		return None
 	
-	def findkey(self, key):
+	def find(self, key):
 		
-		return None
-	
-	def findvalue(self, val):
-		
-		return None
+		return self.dict.get(str(key))
 	
 	def traverse(self):
 		
@@ -618,7 +614,7 @@ class PyDict:
 			
 			print 0
 		
-		return None
+		return worker
 	
 	def display(self):
 		
