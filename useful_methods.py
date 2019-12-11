@@ -552,33 +552,51 @@ def fib_iteration(n):
         	b = temp + b
 		
     	return a
-
-##################################################################################################################################################################################
-
-#A function that computes any variable for Pythagoras' Theorem.
-
-import math
-
-def PyTheoremCalc(a,b,c):
 	
-	if a and b != None and c == None:
+##################################################################################################################################################################################	
+
+class Calculator:
+	
+	def __init__(self):
 		
-		return 0 #sqrt(a^2+b^2)
+		return None
 	
-	elif a and c != None and b == None:
+	def add(self, a, b):
 		
-		return 0 #sqrt(c^2-a^2)
+		return float(a + b)
 	
-	elif b and c != None and a == None:
+	def subtract(self, a, b):
 		
-		return 0 #sqrt(c^2-b^2)
+		return float(a-b)
 	
-	else:
+	def multiply(self, a, b):
 		
-		return 0
+		return float(a*b)
 	
+	def divide(self, a, b):
+		
+		return float(a / b)
 	
-
+	def average(self, nums, total):
+		
+		if sum(nums) > 0:
+			
+			return float(sum(nums) / len(nums))
+			
+	
+	def PyTheorem(self, a, b, c):
+		
+		if a and b != None and c ==None
+		
+			return 0 #sqrt(a^2+b^2)
+		
+		elif a and c != None and b == None:
+		
+			return 0 #sqrt(c^2-a^2)
+		
+		elif b and self.c != None and a == None:
+		
+			return 0 #sqrt(c^2-b^2)
 
 ##################################################################################################################################################################################
 
