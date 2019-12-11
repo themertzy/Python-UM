@@ -583,7 +583,6 @@ class Calculator:
 			
 			return float(sum(nums) / len(nums))
 			
-	
 	def PyTheorem(self, a, b, c):
 		
 		if a and b != None and c ==None
