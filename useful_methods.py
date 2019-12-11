@@ -596,7 +596,23 @@ class PyDict:
 			
 	def add(self, key, val):
 		
-		return None
+		if self.dict.get(key):
+			
+			return None
+		
+		else:
+			
+			self.dict.update({key : val})
+			
+	def change(self, key, val):
+		
+		if self.dict.get(key):
+			
+			self.dict.update({key : val})
+		
+		else:
+			
+			return None
 	
 	def remove(self, key):
 		
@@ -604,17 +620,17 @@ class PyDict:
 	
 	def find(self, key):
 		
-		return self.dict.get(str(key))
+		return self.dict.get(key)
 	
-	def traverse(self):
+	def len(self):
 		
-		worker = []
+		total = 0
 		
-		for i in range(0, len(self.dict)-1):
+		for key in self.dict:
 			
-			print 0
-		
-		return worker
+			total = total + 1
+			
+		return total
 	
 	def display(self):
 		
