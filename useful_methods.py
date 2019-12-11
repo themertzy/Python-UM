@@ -609,20 +609,20 @@ class PyDict:
 		if self.dict.get(key):
 			
 			self.dict.update({key : val})
-		
-		else:
-			
-			return None
 	
 	def remove(self, key):
 		
-		return None
+		if self.dict.get(key):
+			
+			self.dict.pop(key)
+		
+		return (key, self.dict.get(key))
 	
 	def find(self, key):
 		
 		return self.dict.get(key)
 	
-	def len(self):
+	def length(self):
 		
 		total = 0
 		
@@ -633,8 +633,8 @@ class PyDict:
 		return total
 	
 	def display(self):
-		
-		return None
+	
+		return (self.dict.keys(), self.dict.values())
 			
 
 ##################################################################################################################################################################################
