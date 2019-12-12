@@ -212,7 +212,7 @@ class Stack:
 		def __init__(self, maxSize):
 		
 				self.stack = []
-				maxSize = maxSize
+				self.maxSize = maxSize
 
 		def isEmpty(self):
 		
