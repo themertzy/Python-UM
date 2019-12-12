@@ -559,41 +559,60 @@ class Calculator:
 	
 	def __init__(self):
 		
-		return None
+		runner = None
 	
 	def add(self, a, b):
 		
-		return float(a + b)
+		self.a = a
+		self.b = b
+		
+		return float(self.a + self.b)
 	
 	def subtract(self, a, b):
+		
+		self.a = a
+		self.b = b
 		
 		return float(a-b)
 	
 	def multiply(self, a, b):
 		
-		return float(a*b)
+		self.a = a
+		self.b = b
+		
+		return float(self.a*self.b)
 	
 	def divide(self, a, b):
 		
-		return float(a / b)
+		self.a = a
+		self.b = b
+		
+		return float(self.a / self.b)
 	
 	def average(self, nums, total):
 		
+		self.nums = nums
+		self.total = total
+		
 		if sum(nums) > 0:
 			
-			return float(sum(nums) / len(nums))
+			return float(sum(self.nums) / len(self.nums))
 			
 	def PyTheorem(self, a, b, c):
 		
-		if a and b != None and c ==None
+		self.a = a
+		self.b = b
+		self.c = c
+		
+		if self.a and self.b != None and self.c ==None
 		
 			return 0 #sqrt(a^2+b^2)
 		
-		elif a and c != None and b == None:
+		elif self.a and self.c != None and self.b == None:
 		
 			return 0 #sqrt(c^2-a^2)
 		
-		elif b and self.c != None and a == None:
+		elif self.b and self.c != None and a == None:
 		
 			return 0 #sqrt(c^2-b^2)
 
