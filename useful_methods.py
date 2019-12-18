@@ -559,7 +559,7 @@ class Calculator:
 	
 	def __init__(self):
 		
-		runner = None
+		self.counter = None
 	
 	def add(self, a, b):
 		
@@ -594,7 +594,7 @@ class Calculator:
 		self.nums = nums
 		self.total = total
 		
-		if sum(nums) > 0:
+		if sum(self.nums) > 0:
 			
 			return float(sum(self.nums) / len(self.nums))
 			
@@ -604,7 +604,7 @@ class Calculator:
 		self.b = b
 		self.c = c
 		
-		if self.a and self.b != None and self.c ==None
+		if self.a and self.b != None and self.c == None
 		
 			return 0 #sqrt(a^2+b^2)
 		
@@ -660,11 +660,11 @@ class PyDict:
 	
 	def length(self):
 		
-		total = 0
+		self.total = 0
 		
 		for key in self.dict:
 			
-			total = total + 1
+			self.total = self.total + 1
 			
 		return total
 	
