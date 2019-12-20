@@ -606,23 +606,23 @@ class Calculator:
 	
 		if n <= 1:
 			
-			self.functioncalls = self.functioncalls + 1
 			return n
 		
 		else:
 			
-			self.functioncalls = self.functioncalls + 1
 			return(fibb(n-1) + fibb(n-2))
+	class area:
 		
-	def areatriangle(b, h):
-		
-		self.functioncalls = self.functioncalls + 1
-		return b*h*(1/2)
-	
-	def areasquare(l, h):
-		
-		self.functioncalls = self.functioncalls + 1
-		return l*h
+		def __init__(self,type):
+			
+			
+		def triangle(b, h):
+
+			return b*h*(1/2)
+
+		def square(l, h):
+
+			return l*h
 
 ##################################################################################################################################################################################
 
