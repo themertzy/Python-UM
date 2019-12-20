@@ -611,10 +611,12 @@ class Calculator:
 		else:
 			
 			return(fibb(n-1) + fibb(n-2))
+		
 	class area:
 		
-		def __init__(self,type):
+		def __init__(self):
 			
+			self.DefineArea = None
 			
 		def triangle(b, h):
 
