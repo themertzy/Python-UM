@@ -48,16 +48,13 @@ class Die:
                 self.numSides = int(numberOfSides)
                 self.currentFace = None
 
-
         def roll(self):
                 
-            self.currentFace = random.randrange(1, self.numSides)
-                
+            self.currentFace = random.randrange(1, self.numSides)                
 
         def displayFace(self):
 
             return self.currentFace
-
 
         def changeNumberOfSides(self, newNum): #newNum is an integer.
 
@@ -559,62 +556,73 @@ class Calculator:
 	
 	def __init__(self):
 		
-		self.counter = None
+		self.fuctioncalls = 0
 	
 	def add(self, a, b):
 		
-		self.a = a
-		self.b = b
-		
-		return float(self.a + self.b)
+		self.functioncalls = self.functioncalls + 1
+		return float(a + b)
 	
 	def subtract(self, a, b):
 		
-		self.a = a
-		self.b = b
-		
+		self.functioncalls = self.functioncalls + 1
 		return float(a-b)
 	
 	def multiply(self, a, b):
 		
-		self.a = a
-		self.b = b
-		
-		return float(self.a*self.b)
+		self.functioncalls = self.functioncalls + 1
+		return float(a*b)
 	
 	def divide(self, a, b):
 		
-		self.a = a
-		self.b = b
-		
-		return float(self.a / self.b)
+		self.functioncalls = self.functioncalls + 1
+		return float(a / b)
 	
 	def average(self, nums, total):
-		
-		self.nums = nums
-		self.total = total
-		
-		if sum(self.nums) > 0:
+
+		if sum(nums) > 0:
 			
-			return float(sum(self.nums) / len(self.nums))
+			self.functioncalls = self.functioncalls + 1
+			return float(sum(nums) / len(nums))
 			
 	def PyTheorem(self, a, b, c):
 		
-		self.a = a
-		self.b = b
-		self.c = c
+		if a and b != None and c == None
 		
-		if self.a and self.b != None and self.c == None
-		
+			self.functioncalls = self.functioncalls + 1
 			return 0 #sqrt(a^2+b^2)
 		
-		elif self.a and self.c != None and self.b == None:
-		
+		elif a and c != None and b == None:
+			
+			self.functioncalls = self.functioncalls + 1
 			return 0 #sqrt(c^2-a^2)
 		
-		elif self.b and self.c != None and a == None:
-		
+		elif b and sc != None and a == None:
+			
+			self.functioncalls = self.functioncalls + 1
 			return 0 #sqrt(c^2-b^2)
+		
+	def fibb(n):
+	
+		if n <= 1:
+			
+			self.functioncalls = self.functioncalls + 1
+			return n
+		
+		else:
+			
+			self.functioncalls = self.functioncalls + 1
+			return(fibb(n-1) + fibb(n-2))
+		
+	def areatriangle(b, h):
+		
+		self.functioncalls = self.functioncalls + 1
+		return b*h*(1/2)
+	
+	def areasquare(l, h):
+		
+		self.functioncalls = self.functioncalls + 1
+		return l*h
 
 ##################################################################################################################################################################################
 
@@ -631,7 +639,7 @@ class PyDict:
 			self.dict = {}
 			
 	def add(self, key, val):
-		
+
 		if self.dict.get(key):
 			
 			return None
@@ -641,13 +649,13 @@ class PyDict:
 			self.dict.update({key : val})
 			
 	def change(self, key, val):
-		
+
 		if self.dict.get(key):
 			
 			self.dict.update({key : val})
 	
 	def remove(self, key):
-		
+
 		if self.dict.get(key):
 			
 			self.dict.pop(key)
@@ -655,7 +663,7 @@ class PyDict:
 		return (key, self.dict.get(key))
 	
 	def find(self, key):
-		
+
 		return self.dict.get(key)
 	
 	def length(self):
