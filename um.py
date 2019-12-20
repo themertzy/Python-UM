@@ -552,7 +552,7 @@ def fib_iteration(n):
 	
 ##################################################################################################################################################################################	
 
-class Calculator:
+class calculator:
 	
 	def __init__(self):
 		
@@ -560,47 +560,49 @@ class Calculator:
 	
 	def add(self, a, b):
 		
-		self.functioncalls = self.functioncalls + 1
 		return float(a + b)
 	
 	def subtract(self, a, b):
-		
-		self.functioncalls = self.functioncalls + 1
+
 		return float(a-b)
 	
 	def multiply(self, a, b):
-		
-		self.functioncalls = self.functioncalls + 1
+
 		return float(a*b)
 	
 	def divide(self, a, b):
-		
-		self.functioncalls = self.functioncalls + 1
+
 		return float(a / b)
+	
+	def power(base, exp):
+    		
+		if(exp==1):
+       			
+			return base
+   		 
+		else:
+       			
+			return(base*power(base,exp-1))
 	
 	def average(self, nums, total):
 
 		if sum(nums) > 0:
-			
-			self.functioncalls = self.functioncalls + 1
+
 			return float(sum(nums) / len(nums))
 			
 	def PyTheorem(self, a, b, c):
 		
 		if a and b != None and c == None
 		
-			self.functioncalls = self.functioncalls + 1
-			return 0 #sqrt(a^2+b^2)
+			return sqrt((a**2)+(b**2))
 		
 		elif a and c != None and b == None:
-			
-			self.functioncalls = self.functioncalls + 1
-			return 0 #sqrt(c^2-a^2)
+
+			return sqrt((c**2)-(a**2))
 		
-		elif b and sc != None and a == None:
-			
-			self.functioncalls = self.functioncalls + 1
-			return 0 #sqrt(c^2-b^2)
+		elif b and c != None and a == None:
+
+			return sqrt((c**2)-(b**2))
 		
 	def fibb(n):
 	
@@ -612,7 +614,7 @@ class Calculator:
 			
 			return(fibb(n-1) + fibb(n-2))
 		
-	class area:
+	class area:                      #Nested class
 		
 		def __init__(self):
 			
@@ -625,6 +627,16 @@ class Calculator:
 		def square(l, h):
 
 			return l*h
+		
+		def parallelogram(b, h):
+			
+			return b*h
+		
+		def circle(vertradius, parradius):
+			
+			return None
+		
+	
 
 ##################################################################################################################################################################################
 
