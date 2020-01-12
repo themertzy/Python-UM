@@ -15,7 +15,7 @@
 
 #This function returns False if it fails to open, read, or split the text.
 
-def fileToList(inputFile, delimeter):
+def ftl(inputFile, delimeter):
 
         try:
                 with open(inputFile, "r") as myfile:
