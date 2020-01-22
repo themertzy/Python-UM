@@ -688,7 +688,7 @@ class PyDict:
 			
 			self.total = self.total + 1
 			
-		return total
+		return self.total
 	
 	def display(self):
 	
