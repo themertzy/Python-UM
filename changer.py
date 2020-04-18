@@ -10,8 +10,7 @@
 #Note: This program returns a list of the items split at the given delimeter. If this
 #delimeter is a new line character or something of that sort, then the delimeter
 #needs to be put in with quotes. ALWAYS PUT FILE NAMES IN QUOTES!!!
-#This function was tested using the fileToTest.py and using the text file
-#fileToTest.txt
+
 
 #This function returns False if it fails to open, read, or split the text.
 
