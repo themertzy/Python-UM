@@ -38,7 +38,7 @@ class PyDict:
 
 		return self.dict.get(key)
 	
-	def length(self):
+	def size(self):
 		
 		self.total = 0
 		
