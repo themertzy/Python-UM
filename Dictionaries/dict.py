@@ -48,7 +48,7 @@ class PyDict:
 			
 		return self.total
 	
-	def display(self):
+	def show(self):
 	
 		return (self.dict.keys(), self.dict.values())
 			
