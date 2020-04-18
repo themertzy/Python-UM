@@ -1,7 +1,4 @@
 Package: Python-UM
-
-Language: Python v3.8.0
-
 Project Version: NA
 
 
