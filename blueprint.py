@@ -537,7 +537,7 @@ def fibb_recur(n):
 
 #A Fibonacci Sequence Function using iteration.  Iteration is often considered to be slower than a recursive approach.
 
-def fib_iteration(n):
+def fib_iter(n):
     
 	a = 0
 	b = 1
@@ -574,7 +574,7 @@ class calculator:
 		return float(a / b)
 	
 	def power(base, exp):
-    		
+		
 		if(exp==1):
        			
 			return base
