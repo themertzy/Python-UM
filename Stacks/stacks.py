@@ -1,8 +1,3 @@
-#This is a generic stack class. I have found that it is very useful in the representation
-#of how computers internally work as well as being good to have for various list-esk
-#problems. FYI many programing language interpreters and virtual machines are run
-#using stacks of some form or another.
-
 class Stack:
 
 		def __init__(self, maxSize):
