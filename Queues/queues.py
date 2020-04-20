@@ -3,7 +3,7 @@ class Queue:
 		def __init__(self, maxSize):
 
 				self.queue = []
-				maxsize = maxSize
+				self.maxsize = maxSize
 
 		def isEmpty(self):
 
@@ -15,7 +15,7 @@ class Queue:
 
 		def push(self, itemToPush):
 
-			while len(self.queue) < maxSize:
+			while len(self.queue) < self.maxSize:
 
 				self.queue.append(itemToPush)
 

@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Trees",
+    "\\Lists",
+    "\\Math",
+    "\\Math\\Basics",
+    "\\Queues",
     "\\Trees\\Simple"
   ],
-  "SelectedNode": "\\Trees",
+  "SelectedNode": "\\Queues\\queues.py",
   "PreviewInSolutionExplorer": false
 }
