@@ -1,7 +1,3 @@
-#This is a queue class.  Similar to the previously defined stack class, queue allows a user
-#to put things on the top of the stack and take them off the bottom. This class can be extended
-#to fit a wider range of problems.
-
 class Queue:
 
 		def __init__(self, maxSize):
