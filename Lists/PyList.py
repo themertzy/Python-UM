@@ -2,20 +2,22 @@ class PyList:
         
         def __init__(self): 
                 
-                self.worker = []
+                self.mainList = []
             
         def add(self, item):
           
               self.item = item
               
-              self.worker = self.worker + [self.item]
+              self.mainList = self.mainList + [self.item]
               
               return self.worker
               
-        def insert(self, item, pos):
+        def addItemBefore(self, itemToAdd, pos):
           
-              self.item = item
+              self.itemToAdd = itemToAdd
               self.pos = pos
               
               
-
+        def addItemAfter(self, pos, newItem):
+              
+              return None
