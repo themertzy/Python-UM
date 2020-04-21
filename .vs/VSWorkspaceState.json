@@ -1,12 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\HTTP",
     "\\Lists",
     "\\Math",
     "\\Math\\Basics",
     "\\Queues",
     "\\Stacks"
   ],
-  "SelectedNode": "\\HTTP",
+  "SelectedNode": "\\HTTP\\SimpleHTTPServer.py",
   "PreviewInSolutionExplorer": false
 }
