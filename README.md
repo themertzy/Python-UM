@@ -1,2 +1,2 @@
 # Python-UM
-A collection of commonly used or multipurpose Python methods.
+A user friendly package of useful Python methods.
