@@ -1,4 +1,3 @@
-
 #This function can be used to read in a file and split it along a certain
 
 #designated delimeter. I have found this particularly usefull when dealing
