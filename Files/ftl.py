@@ -27,7 +27,7 @@ def ftl(inputFile, delimeter):
 
         except:
         
-                returnValue = "Error: Unable to read file :: " + str(inputFile)
+                returnValue = False
                 
         return returnValue
 
