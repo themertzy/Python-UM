@@ -1,3 +1,8 @@
+#
+#This code is taken directly from the Python source code.
+#
+
+
 
 """Simple HTTP Server.
 
