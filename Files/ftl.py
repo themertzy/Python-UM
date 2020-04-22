@@ -11,7 +11,6 @@
 
 #needs to be put in with quotes. ALWAYS PUT FILE NAMES IN QUOTES!!!
 
-
 #This function returns False if it fails to open, read, or split the text.
 
 
