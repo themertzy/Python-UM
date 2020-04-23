@@ -19,6 +19,11 @@ class PyArray:
 
         return None
 
-    def remove(self):
+    def clear(self):
 
-        return None
+        self.mainArray = []
+
+    def clone(self):
+
+        return self.mainArray
+

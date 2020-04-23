@@ -11,3 +11,11 @@ class PyList:
         def instert(self, pos, *argv):
 
             return None
+
+        def remove(self):
+
+            return None
+
+        def clone(self):
+
+            return None
