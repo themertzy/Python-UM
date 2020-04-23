@@ -4,20 +4,10 @@ class PyList:
                 
                 self.mainList = []
             
-        def add(self, item):
-          
-              self.item = item
-              
-              self.mainList = self.mainList + [self.item]
-              
-              return self.worker
-              
-        def addItemBefore(self, itemToAdd, pos):
-          
-              self.itemToAdd = itemToAdd
-              self.pos = pos
-              
-              
-        def addItemAfter(self, pos, newItem):
+        def add(self, *argv):
               
               return None
+              
+        def instert(self, pos, *argv):
+
+            return None
