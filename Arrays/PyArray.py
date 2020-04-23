@@ -4,7 +4,21 @@ class PyArray:
     def __init__(self, *argv):
 
         self.mainArray = []
-        
-        for arg in argv:
 
-            self.mainArray.append(arg)
+        if len(argv) > 0:
+        
+            for arg in argv:
+
+                self.mainArray.append(arg)
+
+    def add(self):
+
+        return None
+
+    def delete(self):
+
+        return None
+
+    def remove(self):
+
+        return None
