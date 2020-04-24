@@ -14,6 +14,10 @@ class PyArray:
 
         return None
 
+    def insert(self):
+
+        return None
+
     def delete(self):
 
         return None
@@ -25,4 +29,14 @@ class PyArray:
     def show(self):
 
         return self.mainArray
+
+    def findItem(self):
+
+        return None
+
+    def findAll(self):
+
+        return None
+
+
 
