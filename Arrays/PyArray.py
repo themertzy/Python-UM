@@ -1,4 +1,3 @@
-
 class PyArray:
 
     def __init__(self, *argv):
