@@ -11,7 +11,7 @@ from Date-Time.imports import *
 from Dictionaries.imports import *
 from Files.imports import *
 from Games.imports import *
-from HTTP.imports import *
+from Web.imports import *
 from Lists.imports import *
 from Maps.imports import *
 from Queues.imports import *
