@@ -4,17 +4,22 @@ class PyArray:
 
         self.mainArray = []
 
-        if len(argv) > 0:
+        if len(argv) >= 0:
         
             for arg in argv:
 
                 self.mainArray.append(arg)
 
-    def add(self):
+    def add(self, *argv):
 
-        return None
+        for arg in argv:
 
-    def insert(self):
+            self.mainArray.append(arg)
+
+    def insert(self, item, pos):
+
+        self.item = item
+        self.pos = pos
 
         return None
 
