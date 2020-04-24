@@ -22,7 +22,7 @@ class PyArray:
 
         self.mainArray = []
 
-    def clone(self):
+    def show(self):
 
         return self.mainArray
 
