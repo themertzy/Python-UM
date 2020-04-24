@@ -21,7 +21,7 @@ class PyArray:
         self.item = item
         self.pos = pos
 
-        return None
+        self.mainArray[self.pos] = self.item
 
     def delete(self):
 
@@ -39,7 +39,7 @@ class PyArray:
 
         return None
 
-    def findAll(self):
+    def findAll(self, itemName):
 
         return None
 
