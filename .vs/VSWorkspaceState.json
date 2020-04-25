@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Arrays"
+    "\\Arrays",
+    "\\Dictionaries",
+    "\\Web"
   ],
   "SelectedNode": "\\Arrays\\PyArray.py",
   "PreviewInSolutionExplorer": false
