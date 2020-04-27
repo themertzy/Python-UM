@@ -2,11 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Arrays",
-    "\\Databases",
-    "\\Databases\\MySQL",
-    "\\Dictionaries",
-    "\\Web"
+    "\\Databases\\MySQL"
   ],
-  "SelectedNode": "\\Databases\\MySQL\\imports.py",
+  "SelectedNode": "\\Arrays\\PyArray.py",
   "PreviewInSolutionExplorer": false
 }

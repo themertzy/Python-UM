@@ -35,6 +35,10 @@ class PyArray:
 
         return self.mainArray
 
+    def size(self):
+
+        return None
+
     def findItem(self):
 
         return None
