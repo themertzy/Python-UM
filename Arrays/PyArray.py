@@ -23,7 +23,7 @@ class PyArray:
 
         self.mainArray[self.pos] = self.item
 
-    def delete(self):
+    def remove(self):
 
         return None
 
