@@ -16,7 +16,7 @@ class PyArray:
 
             self.mainArray.append(arg)
 
-    def insert(self, item, pos):
+    def change(self, item, pos):
 
         self.item = item
         self.pos = pos
