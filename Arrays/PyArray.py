@@ -51,7 +51,16 @@ class PyArray:
 
     def findAll(self, itemName):
 
-        return None
+        self.itemName = itemName
+        self.allItems = []
+
+        for i in self.mainArray:
+
+            if self.mainArray[i] == self.itemName:
+
+                self.allItems.append(self.mainArray[i])
+
+        return self.allItems
 
 
 
