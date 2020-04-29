@@ -39,9 +39,15 @@ class PyArray:
 
         return len(self.mainArray)
 
-    def findItem(self):
+    def findItem(self, itemName):
 
-        return None
+        self.itemName = itemName
+
+        for i in self.mainArray:
+
+            if self.mainArray[i] == self.itemName:
+
+                return self.mainArray[i]
 
     def findAll(self, itemName):
 
