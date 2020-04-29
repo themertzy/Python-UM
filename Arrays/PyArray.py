@@ -23,7 +23,11 @@ class PyArray:
 
         self.mainArray[self.pos] = self.item
 
-    def remove(self):
+    def remove(self, *argv):
+
+        for arg in argv:
+
+            return None         #Not finished!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         return None
 
