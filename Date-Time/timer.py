@@ -1,1 +1,3 @@
-#A simple timer.
+#
+#A simple countdown timer
+#
