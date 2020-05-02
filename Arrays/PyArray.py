@@ -39,7 +39,9 @@ class PyArray:
 
         for arg in argv:
 
-            return None
+            if arg == self.mainArray[arg]:
+
+                self.mainArray.remove(arg)
 
     def clear(self):
 
