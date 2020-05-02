@@ -23,13 +23,17 @@ class PyArray:
 
         self.mainArray[self.pos] = self.item
 
-    def removeItem(self, *argv):
+    def removeItem(self, item):
 
-        for arg in argv:
+        self.item = item
 
-            return None        
+        for i in self.mainArray:
 
-        return None
+            if self.mainArray[i] == self.item:
+                
+                self.mainArray.remove(self.item)    
+
+                return self.item
 
     def removeItems(self, *argv):
 
