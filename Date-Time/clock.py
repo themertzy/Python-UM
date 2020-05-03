@@ -17,11 +17,27 @@ class PyClock:
 
         return None
 
+    def currentYear(self):
+
+        return None
+
     def currentMonth(self):
 
         return None
 
+    def currentWeek(self):
+
+        return None
+
     def currentDay(self):
+
+        return None
+
+    def countdown(self):
+
+        return None
+
+    def timer(self):
 
         return None
 
