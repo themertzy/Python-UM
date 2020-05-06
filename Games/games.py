@@ -32,12 +32,6 @@ class Die:
 #the user to roll all the die at once or freeze certain ones so that they do not roll
 #while the others do.
 
-#Both of the next two imports are simply in place in case you decide to copy and paste 
-#the code into another program instead of importing the class or the whole useful_methods.py
-#file.
-
-#A generic controller for this class can be found in cupController.py
-
 #NOTE: The previously defined Die() class is needed for this class to work correctly.
 
 
