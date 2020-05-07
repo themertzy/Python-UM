@@ -2,4 +2,4 @@
 An ever expanding, user friendly package of useful Python methods. 
 
 --------------------------------------------------------------------------------------------
-Documentation: Coming Soon
+
