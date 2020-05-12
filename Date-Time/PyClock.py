@@ -2,6 +2,8 @@
 #An implementation of a clock with full features.
 #
 
+import datetime
+
 
 class PyClock:
 
