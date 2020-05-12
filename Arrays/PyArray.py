@@ -47,9 +47,13 @@ class PyArray:
 
         self.mainArray = []
 
-    def show(self):
+    def showAll(self):
 
         return self.mainArray
+    
+    def showOne(self, pos):
+        
+        return self.mainArray[pos]
 
     def size(self):
 
