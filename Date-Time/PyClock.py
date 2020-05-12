@@ -40,6 +40,10 @@ class PyClock:
     def timer(self):
 
         return None
+    
+    def stopwatch(self):
+        
+        return None
 
 
     
