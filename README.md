@@ -1,5 +1,5 @@
 # Python-UM
-An ever expanding, user friendly package of useful Python methods. 
+An Ever Expanding, User Friendly Package of Useful Python Methods. 
 
 
 
