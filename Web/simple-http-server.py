@@ -1,5 +1,7 @@
 
-#A simple http server for web development.
+# A simple http server for web development.
+
+# Run this program in the directory of the website you want to serve to the local host.
 
 import http.server
 
