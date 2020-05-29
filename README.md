@@ -6,6 +6,7 @@ An Ever Expanding, User Friendly Package of Useful Python Methods.
 ## Documentation
 
 #### Arrays
+  * PyArray.py
 
 
 #### Databases
@@ -15,6 +16,7 @@ An Ever Expanding, User Friendly Package of Useful Python Methods.
 
 
 #### Dictionaries
+  * PyDict.py
 
 
 #### Files
@@ -24,6 +26,7 @@ An Ever Expanding, User Friendly Package of Useful Python Methods.
 
 
 #### Lists
+  * Pylist.py
 
 
 #### Maps
@@ -33,9 +36,11 @@ An Ever Expanding, User Friendly Package of Useful Python Methods.
 
 
 #### Queues
+  * PyQueue.py
 
 
 #### Stacks
+  *PyStack.py
 
 
 #### Trees
