@@ -5,45 +5,45 @@ An Ever Expanding, User Friendly Package of Useful Python Methods.
 
 ## Documentation
 
-#### Arrays
+### Arrays
   * PyArray.py
 
 
-#### Databases
+### Databases
 
 
-#### Date-Time
+### Date-Time
 
 
-#### Dictionaries
+### Dictionaries
   * PyDict.py
 
 
-#### Files
+### Files
 
 
-#### Games
+### Games
 
 
-#### Lists
+### Lists
   * Pylist.py
 
 
-#### Maps
+### Maps
 
 
-#### Math
+### Math
 
 
-#### Queues
+### Queues
   * PyQueue.py
 
 
-#### Stacks
+### Stacks
   *PyStack.py
 
 
-#### Trees
+### Trees
 
 
-#### Web
+### Web
