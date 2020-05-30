@@ -35,6 +35,7 @@ An Ever Expanding, User Friendly Package of Useful Python Methods.
  * PyMap.py
 
 ### Math
+ * PyCalc.py
 
 
 ### Queues
