@@ -1,1 +1,3 @@
-#Handle Python Maps
+# 
+# An implementation of Python maps.
+#
